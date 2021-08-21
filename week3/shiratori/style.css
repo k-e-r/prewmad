@@ -20,6 +20,7 @@ body {
   filter: gray;
   -webkit-filter: grayscale(100%);
   transition: .6s;
+  
 }
 .shirabu:hover {
   filter: none;
@@ -87,6 +88,7 @@ body {
   -webkit-filter: grayscale(100%);
   transition: .6s;
 }
+
 .tendo:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
@@ -111,8 +113,8 @@ body {
 h1{
   font-family: 'Kaiti TC',sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 70px;
-  padding: 60px 50px;
+  font-size: 90px;
+  padding: 40px 50px;
   text-align:center;
   position: relative;
   margin: 0;
