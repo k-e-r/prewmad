@@ -2,65 +2,186 @@
     margin: 0%;
     padding: 0%;
 }
+a{
+    cursor: url(pic/ball.cur), auto;
+}
 
 body{
-    background: linear-gradient(#303030, gray);
+    background: radial-gradient(gray, #303030);
 }
 header{
+    width: 100%;
     position: absolute;
     top: 0%;
     z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .sankaku1 {
     position: absolute;
-    top: 0;
-    width: 350px;
-    height: 200px;
-    /* background-color: #dc143ca4; */
+    display: table;
+    top: -10%;
+    width: 100%;
+    height: 20%;
+    /* transform: skewY(-20deg); */
+    background-color: #dc143ca4;
 }
+.sankakunoshita1{
+    position: absolute;
+    display: table;
+    top: 11%;
+    width: 100%;
+    height: 1%;
+    /* transform: skewY(-20deg); */
+    background-color: #dc143ca4;
+}
+.sankaku2 {
+    position: absolute;
+    display: table;
+    bottom: -0%;
+    right: 0;
+    width: 100%;
+    height: 5%;
+    /* transform: skewY(-20deg); */
+    background-color: rgba(0, 0, 0, 0.671);
+}
+.sankakunoshita2{
+    position: absolute;
+    display: table;
+    bottom: 6%;
+    right: 0;
+    width: 100%;
+    height: 1%;
+    /* transform: skewY(-20deg); */
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.top{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+li{
+    list-style: none;
+    margin-left: 3%;
+}
+.top .link a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 140%;
+    letter-spacing: 2px;
+}
+.top .link a:hover{
+    color: #C0C0C0;
+    transition: .2s;
+}
+.link{
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+    margin-left: 8%;
+}
+header p{
+    width: 100%;
+    text-align: center;
+    animation: in 3s forwards;
+}
+header p a{
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    font-size: 250%;
+    font-family: STKaiti;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-right: 3%;
+}
+header p a:hover{
+    text-shadow: 0 0 0.8px#000;
+}
+@keyframes in{
+    from{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(25%);
+    }
+}
+
+
 
 header img{
     width: 200px;
     height: auto;
-    margin: 30px 30px;
+    margin: 7% 10%;
 }
 .imgs{
     position: relative;
     width: 100%;
     height: 100vh;
+    z-index: 90;
 }
 .imgs div{
     position: absolute;
     bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
+    animation-name: z-in;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 .imgs div img{
     width: auto;
     height: 90vh;
-    animation-name: slide;
-    animation-duration: 20s;
-    animation-iteration-count: initial;
-    /* opacity: 0; */
-}
-.kenma {
-
 }
 
-
-
-
-.kenma
-.kuro
-.yaku
-.shiba
-.riefu
-.kai
-.tora
-.fuku
+@keyframes z-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.base{
+    animation-delay: .5s;
+}
+.kenma{
+    animation-delay: 1s;
+}
+.kuro{
+    animation-delay: 1.5s;
+}
+.yaku{
+    animation-delay: 2s;
+}
+.shiba{
+    animation-delay: 2.5s;
+}
+.riefu{
+    animation-delay: 3s;
+}
+.kai{
+    animation-delay: 3.5s;
+}
+.tora{
+    animation-delay: 4s;
+}
+.fuku{
+    animation-delay: 4.5s;
+}
 .nyan{
-
+    animation-delay: 5s;
 }
+
+
+
 
 .senken a{
     position: absolute;
@@ -133,8 +254,4 @@ header img{
     width: 4%;
     height: 15%;
     /* border: 1px solid #000; */
-}
-
-.senken a:hover ~ .kenma{
-    
 }
