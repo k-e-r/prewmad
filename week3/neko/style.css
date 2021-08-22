@@ -18,6 +18,11 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+header img{
+    width: 200px;
+    height: auto;
+    margin: 7% 10%;
+}
 .sankaku1 {
     position: absolute;
     display: table;
@@ -69,12 +74,16 @@ li{
 .top .link a{
     text-decoration: none;
     color: #fff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rampart One', cursive;
+    font-family: 'Stick', sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-size: 140%;
+    font-weight: bold;
     letter-spacing: 2px;
 }
 .top .link a:hover{
-    color: #C0C0C0;
+    /* color: #C0C0C0; */
+    background: linear-gradient(transparent 60%, #F08022 10%);
     transition: .2s;
 }
 .link{
@@ -84,7 +93,7 @@ li{
     margin-left: 8%;
 }
 header p{
-    width: 100%;
+    width: 50%;
     text-align: center;
     animation: in 3s forwards;
 }
@@ -95,7 +104,7 @@ header p a{
     font-size: 250%;
     font-family: STKaiti;
     letter-spacing: 10px;
-    text-align: center;
+    text-align: right;
     margin-right: 3%;
 }
 header p a:hover{
@@ -104,21 +113,17 @@ header p a:hover{
 @keyframes in{
     from{
         opacity: 0;
-        transform: translateX(0);
+        transform: translateX(-25%);
     }
     to{
         opacity: 1;
-        transform: translateX(25%);
+        transform: translateX(0%);
     }
 }
 
 
 
-header img{
-    width: 200px;
-    height: auto;
-    margin: 7% 10%;
-}
+
 .imgs{
     position: relative;
     width: 100%;
@@ -254,4 +259,19 @@ header img{
     width: 4%;
     height: 15%;
     /* border: 1px solid #000; */
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 99;
+}
+footer p{
+    font-size: 10px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
 }
