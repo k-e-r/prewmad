@@ -1,0 +1,140 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background: linear-gradient(#303030, gray);
+}
+header{
+    position: absolute;
+    top: 0%;
+    z-index: 99;
+}
+.sankaku1 {
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 200px;
+    /* background-color: #dc143ca4; */
+}
+
+header img{
+    width: 200px;
+    height: auto;
+    margin: 30px 30px;
+}
+.imgs{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.imgs div{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.imgs div img{
+    width: auto;
+    height: 90vh;
+    animation-name: slide;
+    animation-duration: 20s;
+    animation-iteration-count: initial;
+    /* opacity: 0; */
+}
+.kenma {
+
+}
+
+
+
+
+.kenma
+.kuro
+.yaku
+.shiba
+.riefu
+.kai
+.tora
+.fuku
+.nyan{
+
+}
+
+.senken a{
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    width: 9%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senkuro a{
+    position: absolute;
+    top: 15%;
+    left: 53%;
+    width: 10%;
+    height: 37%;
+    /* border: 1px solid #000; */
+}
+.senyaku a{
+    position: absolute;
+    top: 53%;
+    left: 62%;
+    width: 8%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senshiba a{
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    width: 8%;
+    height: 50%;
+    /* border: 1px solid #000; */
+}
+.senri a{
+    position: absolute;
+    top: 12%;
+    left: 44%;
+    width: 8%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senkai a{
+    position: absolute;
+    top: 23%;
+    left: 68%;
+    width: 7%;
+    height: 33%;
+    /* border: 1px solid #000; */
+}
+.sentora a{
+    position: absolute;
+    top: 55%;
+    left: 26%;
+    width: 8%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senfuku a{
+    position: absolute;
+    top: 23%;
+    left: 30%;
+    width: 7%;
+    height: 29%;
+    /* border: 1px solid #000; */
+}
+.sennya a{
+    position: absolute;
+    top: 83%;
+    left: 75%;
+    width: 4%;
+    height: 15%;
+    /* border: 1px solid #000; */
+}
+
+.senken a:hover ~ .kenma{
+    
+}
