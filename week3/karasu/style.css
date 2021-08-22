@@ -1,0 +1,506 @@
+body {
+  /* width: 80%; */
+  background-color: #000;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff90;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.global-nav {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  margin: 0 2rem 0 auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #000;
+  /* -webkit-text-stroke: 0.08rem #f08022; */
+  /* background: linear-gradient(transparent 60%, #f08022 10%); */
+  /* transition-duration: 0.3s; */
+}
+
+.nav-item a:hover,
+.nav-item.active {
+  /* offset-x | offset-y | blur-radius | color */
+  /* text-shadow: 1rem 1rem 0 #f08022; */
+  /* -webkit-text-stroke: 0.1rem #f08022; */
+  background: linear-gradient(transparent 60%, #f08022 10%);
+}
+
+.header__img {
+  margin: 1rem;
+  width: 50%;
+}
+
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.chara_intro {
+  margin-top: 15rem;
+  margin-bottom: 0;
+  width: 100%;
+  border-left :solid 15px orange;
+  border-bottom: solid 1px gray;
+  padding: 10px;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #ffffff90;
+  font-family: 'Reggae One', cursive;
+}
+
+.intro_hinata_img {
+  height: 1000px;
+  opacity: 0;
+  transition-duration: 2000ms;
+  transition-property: opacity, transform;
+  margin-top: 0;
+  margin-left: 3rem;
+}
+
+.intro_hinata_con {
+  width: 60%;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-family: 'Reggae One', cursive;
+  opacity: 0;
+  transition-duration: 4000ms;
+  transition-property: opacity, transform;
+}
+
+.intro_hinata_con2 {
+  margin-top: 5rem;
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-family: "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  opacity: 0;
+  transition-duration: 5000ms;
+  transition-property: opacity, transform;
+  /* font-family: 'Reggae One', cursive; */
+}
+
+.fade-in-right {
+  transform: translate(50px, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.chara_intro_con {
+  height: 1200px;
+  width: auto;
+}
+
+.back-image {
+  position: relative;
+  height: 1240px;
+  background-image: url('./images/back.png');
+  opacity:0;
+  animation-name: back_move;
+  animation-duration:5s; 
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes back_move {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  /* opacity:0;
+  transform: translateX(50px); */
+  } 
+}
+
+.contents {
+  animation-delay: 2s;
+  position: relative;
+  height: 1240px;
+  font-size:40px;
+  opacity:0;
+  animation-name: cont_move;
+  animation-duration:5s; 
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes cont_move {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  /* opacity:0;
+  transform: translateX(50px); */
+  } 
+}
+
+.image {
+  /* margin-top: 15rem; */
+  width: 90%;
+  height: 1000px;
+  /* position: relative; */
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15rem;
+  margin: auto;
+}
+
+.hinata {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  /* left: 850px; */
+  left: 50%;
+  transform: translateX(-55%);
+  filter: contrast(55%);
+}
+
+.sawamura {
+  position: absolute;
+  top: 0;
+  /* left: 1550px; */
+  z-index: 0;
+  /*  base */
+  left: 50%;
+  transform: translateX(83%);
+  filter: contrast(55%);
+}
+
+.azumane {
+  position: absolute;
+  top: 0;
+  /* left: 1350px; */
+  z-index: 0;
+  /*  base */
+  left: 50%;
+  transform: translateX(49%);
+  filter: contrast(55%);
+}
+
+.sugawara {
+  position: absolute;
+  top: 0;
+  /* left: 1300px; */
+  z-index: 1;
+  /*  base */
+  left: 50%;
+  transform: translateX(68%);
+  filter: contrast(55%);
+}
+
+.kageyama {
+  position: absolute;
+  top: 0;
+  /* left: 1050px; */
+  z-index: 0;
+  left: 50%;
+  transform: translateX(-5%);
+  filter: contrast(55%);
+}
+
+.tanaka {
+  position: absolute;
+  top: 0;
+  /* left: 600px; */
+  z-index: 0;
+  /*  base */
+  left: 50%;
+  transform: translateX(-112%);
+  filter: contrast(55%);
+}
+
+.yamaguchi {
+  position: absolute;
+  top: 0;
+  /* left: 500px; */
+  z-index: 0;
+  /*  base */
+  left: 50%;
+  transform: translateX(-173%);
+  filter: contrast(55%);
+  filter: contrast(55%);
+}
+
+.tukishima {
+  position: absolute;
+  top: 0;
+  /* left: 300px; */
+  z-index: 0;
+  /*  base */
+  left: 50%;
+  transform: translateX(-235%);
+  filter: contrast(55%);
+}
+
+.nishinoya {
+  position: absolute;
+  top: 0;
+  /* left: 150px; */
+  z-index: 1;
+  /*  base */
+  left: 50%;
+  transform: translateX(-273%);
+  filter: contrast(55%);
+}
+
+.mouse_area {
+  /* margin-top: 15rem; */
+  width: 90%;
+  height: 1000px;
+  /* position: relative; */
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15rem;
+  margin: auto;
+  /* margin-top: 20rem; */
+  /* width: 100%;
+  position: relative; */
+  z-index: 20;
+}
+
+.l_emp_box {
+  position: absolute;
+  margin-top: 150px;
+  /* left: 1750px; */
+  width: 20px;
+  height: 850px;
+  left: 50%;
+  transform: translateX(-4040%);
+  /* border: 1px solid #000; */
+}
+
+.nishi_box {
+  position: absolute;
+  margin-top: 150px;
+  /* left: 150px; */
+  width: 200px;
+  height: 850px;
+  left: 50%;
+  transform: translateX(-465%);
+  /* border: 1px solid #000; */
+}
+
+.tuki_box {
+  position: absolute;
+  margin-top: 0;
+  /* left: 350px; */
+  width: 200px;
+  height: 1000px;
+  left: 50%;
+  transform: translateX(-365%);
+  /* border: 1px solid #000;*/
+} 
+
+.yama_box {
+  position: absolute;
+  margin-top: 50px;
+  /* left: 550px; */
+  width: 200px;
+  height: 950px;
+  left: 50%;
+  transform: translateX(-265%);
+  /* border: 1px solid #000; */
+}
+
+.tanaka_box {
+  position: absolute;
+  margin-top: 73px;
+  /* left: 750px; */
+  width: 200px;
+  height: 927px;
+  left: 50%;
+  transform: translateX(-165%);
+  /* border: 1px solid #000; */
+}
+
+.hinata_box {
+  position: absolute;
+  margin-top: 115px;
+  /* left: 950px; */
+  width: 200px;
+  height: 885px;
+  left: 50%;
+  transform: translateX(-65%);
+  /* border: 1px solid #000; */
+}
+
+.kageyama_box {
+  position: absolute;
+  margin-top: 40px;
+  /* left: 1150px; */
+  width: 200px;
+  height: 960px;
+  left: 50%;
+  transform: translateX(35%);
+  /* border: 1px solid #000; */
+}
+
+.sugawara_box {
+  position: absolute;
+  margin-top: 100px;
+  /* left: 1350px; */
+  width: 200px;
+  height: 900px;
+  left: 50%;
+  transform: translateX(135%);
+  /* border: 1px solid #000; */
+}
+
+.azumane_box {
+  position: absolute;
+  margin-top: 0;
+  /* left: 1550px; */
+  width: 200px;
+  height: 1000px;
+  left: 50%;
+  transform: translateX(235%);
+  /* border: 1px solid #000; */
+}
+
+.sawamura_box {
+  position: absolute;
+  margin-top: 80px;
+  /* left: 1750px; */
+  width: 200px;
+  height: 920px;
+  left: 50%;
+  transform: translateX(335%);
+  /* border: 1px solid #000; */
+}
+
+.r_emp_box {
+  position: absolute;
+  margin-top: 80px;
+  /* left: 1750px; */
+  width: 85px;
+  height: 920px;
+  left: 50%;
+  transform: translateX(990%);
+  /* border: 1px solid #000; */
+}
+
+.fukidashi_com {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0rem;
+  margin: auto;
+}
+
+.fukidashi {
+  position: absolute;
+  margin-top: 0;
+  width: 25rem;
+  z-index: 50;
+  visibility: hidden;
+}
+
+.intro1 {
+  position: absolute;
+  /* margin-top: 0; */
+  /* width: 25rem; */
+  font-size: 2rem;
+  z-index: 60;
+  font-family: 'Reggae One', cursive;
+}
+
+.intro2 {
+  position: absolute;
+  /* margin-top: 0; */
+  /* width: 25rem; */
+  font-size: 2rem;
+  z-index: 60;
+  font-family: 'Reggae One', cursive;
+}
+
+.intro3 {
+  position: absolute;
+  /* margin-top: 0; */
+  /* width: 25rem; */
+  font-size: 2rem;
+  z-index: 60;
+  font-family: 'Reggae One', cursive;
+}
+
+.triangle_rs {
+  position: absolute;
+  right: 0%;
+  top: 15rem;
+  margin: auto;
+  width: 10%;
+  height: 1000px;
+  background-color: #f0802250;
+  z-index: 30;
+}
+
+.triangle_rf {
+  position: absolute;
+  right: 0;
+  top: 15rem;
+  margin: auto;
+  width: 5%;
+  height: 1000px;
+  /* background-color: #f0802250; */
+  z-index: 40;
+}
+
+.triangle_ls {
+  position: absolute;
+  left: 0%;
+  top: 15rem;
+  margin: auto;
+  width: 10%;
+  height: 1000px;
+  background-color: #f0802250;
+  z-index: 30;
+}
+
+.triangle_lf {
+  position: absolute;
+  left: 0;
+  top: 15rem;
+  margin: auto;
+  width: 5%;
+  height: 1000px;
+  /* background-color: #f0802250; */
+  z-index: 40;
+}
