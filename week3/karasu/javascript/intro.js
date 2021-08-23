@@ -1,12 +1,12 @@
-const intro_con = [{id: 'nishi_box', val: -60, name:'西谷 夕', grade: '2年', position: 'リベロ'},
-  {id: 'tuki_box', val:-40, name:'月島 蛍', grade: '1年', position: 'ミドルブロッカー'},
-  {id: 'yama_box', val:-20, name:'山口 忠', grade: '1年', position: 'ミドルブロッカー'},
-  {id: 'tanaka_box', val:0, name:'田中 龍之介', grade: '2年', position: 'ウィングスパイカー'},
-  {id: 'hinata_box', val:30, name:'日向 翔陽', grade: '1年', position: 'ミドルブロッカー'},
-  {id: 'kage_box', val:100, name:'影山 飛雄', grade: '1年', position: 'セッター'},
-  {id: 'suga_box', val:130, name:'菅原 孝支', grade: '3年', position: 'セッター'},
-  {id: 'azuma_box', val:140, name:'東峰 旭', grade: '3年', position: 'ウィングスパイカー'},
-  {id: 'sawa_box', val:160, name:'澤村 大地', grade: '3年', position: 'ウィングスパイカー'}
+const intro_con = [{id: 'nishi_box', name:'西谷 夕', grade: '2年', position: 'リベロ'},
+  {id: 'tuki_box', name:'月島 蛍', grade: '1年', position: 'ミドルブロッカー'},
+  {id: 'yama_box', name:'山口 忠', grade: '1年', position: 'ミドルブロッカー'},
+  {id: 'tanaka_box', name:'田中 龍之介', grade: '2年', position: 'ウィングスパイカー'},
+  {id: 'hinata_box', name:'日向 翔陽', grade: '1年', position: 'ミドルブロッカー'},
+  {id: 'kage_box', name:'影山 飛雄', grade: '1年', position: 'セッター'},
+  {id: 'suga_box', name:'菅原 孝支', grade: '3年', position: 'セッター'},
+  {id: 'azuma_box', name:'東峰 旭', grade: '3年', position: 'ウィングスパイカー'},
+  {id: 'sawa_box', name:'澤村 大地', grade: '3年', position: 'ウィングスパイカー'}
 ];
 
 const fukidashi = document.getElementById('fukidashi');
@@ -32,18 +32,18 @@ function charaIntro (chara) {
   const x = clientRect.left;
   // 画面の上端から、要素の上端までの距離
   const y = clientRect.top;
-  // console.log('intro:');
-  // console.log(window.pageYOffset);
-  // console.log(y);
-  fukidashi.style.left = (x - fukidashi_w/2) + 'px';
-  fukidashi.style.top = (y - 400 + window.pageYOffset) + 'px';
-  intro1.style.left = (x + intro_con[num].val) + 'px';
+  console.log('intro:');
+  console.log(x);
+  console.log(y);
+  fukidashi.style.left = (x - fukidashi_w/2 - 50) + 'px';
+  fukidashi.style.top = (y - 370 + window.pageYOffset) + 'px';
+  intro1.style.left = (x - fukidashi_w/2 + 20) + 'px';
   intro1.style.top = (y - 370 + window.pageYOffset) + 'px';
   intro1.textContent = intro_con[num].name;
-  intro2.style.left = (x + intro_con[num].val) + 'px';
+  intro2.style.left = (x - fukidashi_w/2 + 20) + 'px';
   intro2.style.top = (y - 320 + window.pageYOffset) + 'px';
   intro2.textContent = intro_con[num].grade;
-  intro3.style.left = (x + intro_con[num].val) + 'px';
+  intro3.style.left = (x - fukidashi_w/2 + 20) + 'px';
   intro3.style.top = (y - 270 + window.pageYOffset) + 'px';
   intro3.textContent = intro_con[num].position;
 }
