@@ -3,47 +3,96 @@ body {
   background-color: #000;
 }
 
-.header {
+/* header from here */
+header{
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sankaku1 {
+  position: absolute;
+  display: table;
+  top: -10%;
+  width: 100%;
+  height: 20%;
+  /* transform: skewY(-20deg); */
+  background-color: #f0802280;
+  z-index: 1;
+}
+.sankakunoshita1{
+  position: absolute;
+  display: table;
+  top: 11%;
+  width: 100%;
+  height: 1%;
+  /* transform: skewY(-20deg); */
+  background-color: #f0802280;
+  z-index: 1;
+}
+.top{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+li{
+  list-style: none;
+  margin-left: 3%;
+}
+.top .link a{
+  text-decoration: none;
+  color: #fff;
+  font-family: ‘Courier New’, Courier, monospace;
+  font-size: 140%;
+  letter-spacing: 2px;
+}
+.top .link a:hover{
+  color: #C0C0C0;
+  transition: .2s;
+}
+.link{
   width: 100%;
   display: flex;
-  align-items: center;
-  background-color: #ffffff90;
-  position: sticky;
-  top: 0;
-  z-index: 99;
+  margin-top: 1%;
+  margin-left: 8%;
 }
-
-.global-nav {
-  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-  margin: 0 2rem 0 auto;
-  font-size: 2.5rem;
-  font-weight: bold;
+header p{
+  width: 100%;
+  text-align: center;
+  animation: in 3s forwards;
 }
-
-.nav-item {
-  display: inline-block;
-}
-
-.nav-item a {
+header p a{
   text-decoration: none;
   color: #000;
-  /* -webkit-text-stroke: 0.08rem #f08022; */
-  /* background: linear-gradient(transparent 60%, #f08022 10%); */
-  /* transition-duration: 0.3s; */
+  width: 100%;
+  font-size: 250%;
+  font-family: STKaiti;
+  letter-spacing: 10px;
+  text-align: center;
+  margin-right: 3%;
 }
-
-.nav-item a:hover,
-.nav-item.active {
-  /* offset-x | offset-y | blur-radius | color */
-  /* text-shadow: 1rem 1rem 0 #f08022; */
-  /* -webkit-text-stroke: 0.1rem #f08022; */
-  background: linear-gradient(transparent 60%, #f08022 10%);
+header p a:hover{
+  text-shadow: 0 0 0.8px#000;
 }
-
-.header__img {
-  margin: 1rem;
-  width: 50%;
+@keyframes in{
+  from{
+      opacity: 0;
+      transform: translateX(0);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(25%);
+  }
 }
+header img{
+  width: 200px;
+  height: auto;
+  margin: 7% 10%;
+}
+/* header end */
 
 .article {
   display: flex;
@@ -51,11 +100,12 @@ body {
   width: 80%;
   left: 0;
   right: 0;
+  top: 10rem;
   margin: auto;
 }
 
 .chara_intro {
-  margin-top: 15rem;
+  margin-top: 50rem;
   margin-bottom: 0;
   width: 100%;
   border-left :solid 15px orange;
@@ -65,6 +115,7 @@ body {
   font-weight: bold;
   background-color: #ffffff90;
   font-family: 'Reggae One', cursive;
+  zoom: 0.5;
 }
 
 .intro_hinata_img {
@@ -74,6 +125,7 @@ body {
   transition-property: opacity, transform;
   margin-top: 0;
   margin-left: 3rem;
+  zoom: 0.5;
 }
 
 .intro_hinata_con {
@@ -85,6 +137,7 @@ body {
   opacity: 0;
   transition-duration: 4000ms;
   transition-property: opacity, transform;
+  zoom: 0.5;
 }
 
 .intro_hinata_con2 {
@@ -108,19 +161,19 @@ body {
 }
 
 .chara_intro_con {
-  height: 1200px;
+  height: 500px;
   width: auto;
 }
 
 .back-image {
   position: relative;
-  height: 1240px;
+  height: 600px;
   background-image: url('./images/back.png');
-  opacity:0;
+  /* opacity:0; */
   animation-name: back_move;
   animation-duration:5s; 
   /* animation-iteration-count: infinite; */
-  animation-fill-mode: forwards;
+  /* z-index: 0; */
 }
 
 @keyframes back_move {
@@ -141,13 +194,14 @@ body {
 }
 
 .contents {
+  margin-top: 5rem;
   animation-delay: 2s;
   position: relative;
-  height: 1240px;
+  /* height: 1240px; */
   font-size:40px;
-  opacity:0;
+  /* opacity:0;
   animation-name: cont_move;
-  animation-duration:5s; 
+  animation-duration:5s;  */
   /* animation-iteration-count: infinite; */
   animation-fill-mode: forwards;
 }
@@ -172,13 +226,13 @@ body {
 .image {
   /* margin-top: 15rem; */
   width: 90%;
-  height: 1000px;
+  height: 500px;
   /* position: relative; */
   overflow: hidden;
   position: absolute;
   left: 0;
   right: 0;
-  top: 15rem;
+  top: 9rem;
   margin: auto;
 }
 
@@ -190,6 +244,7 @@ body {
   left: 50%;
   transform: translateX(-55%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .sawamura {
@@ -201,6 +256,7 @@ body {
   left: 50%;
   transform: translateX(83%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .azumane {
@@ -212,6 +268,7 @@ body {
   left: 50%;
   transform: translateX(49%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .sugawara {
@@ -223,6 +280,7 @@ body {
   left: 50%;
   transform: translateX(68%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .kageyama {
@@ -233,6 +291,7 @@ body {
   left: 50%;
   transform: translateX(-5%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .tanaka {
@@ -244,6 +303,7 @@ body {
   left: 50%;
   transform: translateX(-112%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .yamaguchi {
@@ -256,6 +316,7 @@ body {
   transform: translateX(-173%);
   filter: contrast(55%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .tukishima {
@@ -267,6 +328,7 @@ body {
   left: 50%;
   transform: translateX(-235%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .nishinoya {
@@ -278,18 +340,19 @@ body {
   left: 50%;
   transform: translateX(-273%);
   filter: contrast(55%);
+  zoom: 0.5;
 }
 
 .mouse_area {
   /* margin-top: 15rem; */
   width: 90%;
-  height: 1000px;
+  height: 500px;
   /* position: relative; */
   overflow: hidden;
   position: absolute;
   left: 0;
   right: 0;
-  top: 15rem;
+  top: 9rem;
   margin: auto;
   /* margin-top: 20rem; */
   /* width: 100%;
@@ -306,6 +369,7 @@ body {
   left: 50%;
   transform: translateX(-4040%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .nishi_box {
@@ -317,6 +381,7 @@ body {
   left: 50%;
   transform: translateX(-465%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .tuki_box {
@@ -327,7 +392,8 @@ body {
   height: 1000px;
   left: 50%;
   transform: translateX(-365%);
-  /* border: 1px solid #000;*/
+  /* border: 1px solid #000; */
+  zoom: 0.5;
 } 
 
 .yama_box {
@@ -339,6 +405,7 @@ body {
   left: 50%;
   transform: translateX(-265%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .tanaka_box {
@@ -350,6 +417,7 @@ body {
   left: 50%;
   transform: translateX(-165%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .hinata_box {
@@ -361,6 +429,7 @@ body {
   left: 50%;
   transform: translateX(-65%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .kageyama_box {
@@ -372,6 +441,7 @@ body {
   left: 50%;
   transform: translateX(35%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .sugawara_box {
@@ -383,6 +453,7 @@ body {
   left: 50%;
   transform: translateX(135%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .azumane_box {
@@ -394,6 +465,7 @@ body {
   left: 50%;
   transform: translateX(235%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .sawamura_box {
@@ -405,6 +477,7 @@ body {
   left: 50%;
   transform: translateX(335%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .r_emp_box {
@@ -416,6 +489,7 @@ body {
   left: 50%;
   transform: translateX(990%);
   /* border: 1px solid #000; */
+  zoom: 0.5;
 }
 
 .fukidashi_com {
@@ -424,6 +498,7 @@ body {
   right: 0;
   top: 0rem;
   margin: auto;
+  zoom: 0.7;
 }
 
 .fukidashi {
@@ -432,6 +507,7 @@ body {
   width: 25rem;
   z-index: 50;
   visibility: hidden;
+  zoom: 0.7;
 }
 
 .intro1 {
@@ -441,6 +517,7 @@ body {
   font-size: 2rem;
   z-index: 60;
   font-family: 'Reggae One', cursive;
+  zoom: 0.6;
 }
 
 .intro2 {
@@ -450,6 +527,7 @@ body {
   font-size: 2rem;
   z-index: 60;
   font-family: 'Reggae One', cursive;
+  zoom: 0.6;
 }
 
 .intro3 {
@@ -459,9 +537,10 @@ body {
   font-size: 2rem;
   z-index: 60;
   font-family: 'Reggae One', cursive;
+  zoom: 0.6;
 }
 
-.triangle_rs {
+/* .triangle_rs {
   position: absolute;
   right: 0%;
   top: 15rem;
@@ -470,6 +549,7 @@ body {
   height: 1000px;
   background-color: #f0802250;
   z-index: 30;
+  zoom: 0.5;
 }
 
 .triangle_rf {
@@ -480,10 +560,11 @@ body {
   width: 5%;
   height: 1000px;
   /* background-color: #f0802250; */
-  z-index: 40;
-}
+  /* z-index: 40;
+  zoom: 0.5;
+} */
 
-.triangle_ls {
+/* .triangle_ls {
   position: absolute;
   left: 0%;
   top: 15rem;
@@ -492,9 +573,10 @@ body {
   height: 1000px;
   background-color: #f0802250;
   z-index: 30;
-}
+  zoom: 0.5;
+} */
 
-.triangle_lf {
+/* .triangle_lf {
   position: absolute;
   left: 0;
   top: 15rem;
@@ -502,5 +584,21 @@ body {
   width: 5%;
   height: 1000px;
   /* background-color: #f0802250; */
-  z-index: 40;
+  /* z-index: 40;
+  zoom: 0.5;
+} */
+
+/* footer from here */
+footer{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
+footer p{
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+}
+/* footer end */
