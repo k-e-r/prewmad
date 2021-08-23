@@ -14,20 +14,21 @@ function changeImage(){
   }
 
   let opacityInt = image.style.opacity * 40;
-  //フェードアウトの処理（opacityを50ミリ秒ごとに0.1づつ減らす）
   let ushiwaka = setInterval( () => {
     opacityInt = opacityInt - 10;
     image.style.opacity = opacityInt / 100;
+    //フェードアウトの処理（opacityを40ミリ秒ごとに0.1づつ減らす）
 
     if(image.style.opacity <= 0){
       clearInterval(ushiwaka);
       //画像を交換
       image.src = './pics/牛若.jpeg';
       opacityInt = image.style.opacity * 50;
-      //フェードインの処理（opacityを100ミリ秒ごとに0.1づつ増やす）
       ushiwaka = setInterval( () => {
         opacityInt = opacityInt + 10;
         image.style.opacity = opacityInt / 100;
+        //フェードインの処理（opacityを50ミリ秒ごとに0.1づつ増やす）
+      
         if(image.style.opacity >= 1){
           clearInterval(ushiwaka);
         }

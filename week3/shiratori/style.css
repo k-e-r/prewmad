@@ -20,7 +20,7 @@ header{
 #loading { 
   width: 100vw;
   height: 100vh;
-  transition: all 1s; 
+  transition: all 3s; 
   background-color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ header{
   height: 50%;
   background-image: url("/pics/crow.gif");
   margin: 200px auto;
-  animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 2.0s infinite ease-in-out;
 }
 @keyframes sk-scaleout {
   0% {
