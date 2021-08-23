@@ -64,7 +64,7 @@ window.onscroll = function()
   console.log(scrollTop);
   var pos = document.getElementById('chara_intro').getBoundingClientRect().top;
   console.log(pos + window.pageYOffset);
-  if (scrollTop > (pos + window.pageYOffset - 400)) {
+  if (scrollTop > (pos + window.pageYOffset - 200)) {
     document.getElementById('intro_hinata_img').classList.add('scroll-in');
     document.getElementById('intro_hinata_con').classList.add('scroll-in');
     document.getElementById('intro_hinata_con2').classList.add('scroll-in');
