@@ -4,13 +4,89 @@ body {
   margin:0px;
   background-color: black;
 }
+/* header */
+header{
+  width: 100%;
+  position:relative;
+  top: 0%;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.top{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+li{
+  list-style: none;
+  position: relative;
+  display: inline;
+  left: 300px;
+  bottom: 30px;
+}
+.linkname{
+  text-decoration: none;
+  color: #fff;
+  font-family: ‘Courier New’, Courier, monospace;
+  font-size: 160%;
+  letter-spacing: 2px;
+}
+.top .link a:hover{
+  color: #C0C0C0;
+  transition: .2s;
+}
+.link{
+  width: 100%;
+  display: flex;
+  margin-top: 1%;
+  margin-left: 8%;
+}
+header p{
+  width: 100%;
+  text-align: center;
+  animation: in 3s forwards;
+}
+header p a{
+  text-decoration: none;
+  color:white;
+  width: 100%;
+  font-size: 300%;
+  font-family: STKaiti;
+  letter-spacing: 10px;
+  text-align: center;
+  margin-right: 3%;
+}
+header p a:hover{
+  text-shadow: 0 0 0.8px#000;
+}
+@keyframes in{
+  from{
+      opacity: 0;
+      transform: translateX(0);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(25%);
+  }
+}
+header img{
+  width: 200px;
+  height: auto;
+  margin: 7% 10%;
+}
+
+
+
 .topimg{
   display: flex; 
   justify-content:space-around;
   width: 1400px;
   margin-top: 11px; 
   margin-left: 10PX;
-
   background-color: black;
 }
 
@@ -122,6 +198,10 @@ h1{
   background-color: black;
 }
 .hr1{
+  margin: 0;
+  border: 11px solid rgb(114, 11, 114);
+}
+.hr2{
   margin: 0;
   border: 11px solid rgb(114, 11, 114);
 }
