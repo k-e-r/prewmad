@@ -1,0 +1,23 @@
+.contents {
+  position: relative;
+  /* margin-top: 15rem; */
+  width: 80%;
+  height: 1000px;
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.kenma {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+}
+
+.kuro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  width: 200%;
+}

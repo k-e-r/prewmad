@@ -1,0 +1,55 @@
+/*=============================
+.btn-trigger
+=============================*/
+.btn-trigger {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  /* border: 1px solid; */
+}
+
+.btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 1px;
+  background-color: #000;
+  /* border: 1px solid; */
+}
+
+.btn-trigger, .btn-trigger span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+
+.btn-trigger span:nth-of-type(1) {
+  top: 0px;
+}
+
+.btn-trigger span:nth-of-type(2) {
+  top: 9px;
+}
+
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0px;
+}
+
+/*=============================
+#btn13
+=============================*/
+#btn13.active span:nth-of-type(1),
+#btn13.active span:nth-of-type(3) {
+  width: 9px;
+}
+
+#btn13.active span:nth-of-type(1) {
+  transform: translate(-1px,5px) rotate(-45deg);
+}
+
+#btn13.active span:nth-of-type(3) {
+  transform: translate(-1px,-5px) rotate(45deg);
+}

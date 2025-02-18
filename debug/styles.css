@@ -1,0 +1,170 @@
+body {
+  display: block;
+  margin:3px;
+}
+
+.p1{
+  font-family:"BradleyHand", "cursive";
+  font-size: 100px;
+}
+.p2 {
+  font-family:"Chalkduster","fantasy";
+  font-size: 50px;
+}
+
+.p3 {
+  font-family:"Andale Mono","monospace";
+}
+
+.p4 {
+  font-family:"Andale Mono","monospace";
+  font-size: 27px;
+}
+
+.nav {
+  width: 100%;
+  height: 52px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+.nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float:left;
+}
+
+li a {
+  display:inline-block;
+  color: white;
+  padding:14px 16px;
+  text-decoration: none;
+    }
+
+li a:hover:not(.active) {
+  background-color: rgb(124, 108, 108);
+
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+  }
+  
+  tr:nth-child(1) {background-color: #9db8c0;}
+
+
+h1{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.Banner{
+display:inline-block;
+position: relative;
+top:60px;
+left:600px
+}
+
+.japan{
+display:inline-block;
+position: relative;
+margin-top: 0px;
+}
+
+.hr1{
+  margin:0;
+  border-color: black;
+  border-width:5px;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.hr2 {
+  margin:70px 0 0 0;
+  border-color: black;
+  border-width:1px;
+}
+
+h3{
+  font-size: 45px;
+  text-align:left;
+  margin-bottom: 0px;
+}
+
+.vietnam {
+  width: 100%;
+  display: flex;
+}
+.vietnam .image {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.vietnam .text {
+  font-size: 23px;
+  width: 50%;
+  margin: 40px 0 0 20px;
+  padding: 0;
+}
+.austria{
+  width: 100%;
+  display: flex;
+}
+
+.austria .image{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.austriatext {
+  font-size: 23px;
+  width: 70%;
+  margin: 40px 0 35px 0;
+  padding: 0;
+}
+
+.last{
+  padding-right: 30px;
+  padding-top: 135px;
+    text-align: left;
+}
+
+.hr3 {
+  margin:70px 0 0 0;
+  border-color: rgb(133, 64, 64);
+  border-width:3px;
+}
+
+.text:first-letter{
+	font-size:2em;
+	color:#3e6147;
+}
+
+.austriatext:first-letter{
+	font-size:2em;
+	color:#7a5362;
+}

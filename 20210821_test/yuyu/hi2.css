@@ -1,0 +1,343 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+a{
+    cursor: url(pic/ball.cur), auto;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: radial-gradient(gray, #303030);
+}
+header{
+    width: 100%;
+    /* position: absolute; */
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    width: 200px;
+    height: auto;
+    margin: 7% 10%;
+}
+
+.sankaku1 {
+    position: absolute;
+    display: table;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    /* transform: skewY(-20deg); */
+    background-color: #dc143ca4;
+}
+.sankakunoshita1{
+    position: absolute;
+    display: table;
+    top: 11%;
+    width: 100%;
+    height: 1%;
+    /* transform: skewY(-20deg); */
+    background-color: #dc143ca4;
+}
+
+
+.top{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    z-index: 99;
+}
+li{
+    list-style: none;
+    margin-left: 3%;
+}
+.top .link a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Rampart One', cursive;
+    font-family: 'Stick', sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 140%;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.top .link a:hover{
+    /* color: #C0C0C0; */
+    background: linear-gradient(transparent 60%, #F08022 10%);
+    transition: .2s;
+}
+.link{
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+    margin-left: 8%;
+}
+header p{
+    width: 50%;
+    text-align: center;
+    animation: in 3s forwards;
+}
+header p a{
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    font-size: 250%;
+    font-family: STKaiti;
+    letter-spacing: 10px;
+    text-align: right;
+    margin-right: 3%;
+}
+header p a:hover{
+    text-shadow: 0 0 0.8px#000;
+}
+@keyframes in{
+    from{
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+/* .imgs{
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+} */
+main{
+    position: relative;
+    width: 100%;
+    height: 87%;
+    z-index: 50;
+}
+main img{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: z-in;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.imgs div img{
+    width: auto;
+    height: 90vh;
+}
+
+@keyframes z-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.base{
+    animation-delay: .5s;
+}
+.kenma{
+    animation-delay: 1s;
+}
+.kuro{
+    animation-delay: 1.5s;
+}
+.yaku{
+    animation-delay: 2s;
+}
+.shiba{
+    animation-delay: 2.5s;
+}
+.riefu{
+    animation-delay: 3s;
+}
+.kai{
+    animation-delay: 3.5s;
+}
+.tora{
+    animation-delay: 4s;
+}
+.fuku{
+    animation-delay: 4.5s;
+}
+.nyan{
+    animation-delay: 5s;
+}
+
+#name, #num{
+    /* font-family: 'Anton', sans-serif;
+    font-family: 'Libre Baskerville', serif; */
+    font-family: 'Anton', sans-serif;
+    color: rgba(0, 0, 0, 0.562);
+    z-index: -1;
+}
+#name{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    /* right: 150vw; */
+    font-size: 90px;
+    text-align: left;
+    letter-spacing: 13px;
+    transition: 1s ease-out;
+
+}
+#num{
+    position: absolute;
+    bottom: 0%;
+    /* top: 150vh; */
+    right: 5%;
+    font-size: 400px;
+    transition: 1s ease-out;
+}
+
+#name:hover {
+    animation-name: back_move;
+    animation-duration:5s;
+}
+
+@keyframes back_move {
+    0% {
+    opacity: 0;
+    transform: translateX(-50px);
+    }
+    50%{
+    opacity: 1;
+    transform: translateX(0);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    /* opacity:0;
+    transform: translateX(50px); */
+    } 
+}
+
+.senken{
+    position: relative;
+}
+.senken:hover #name{
+    display: block;
+}
+
+
+.senken a{
+    /* position: relative; */
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    width: 9%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senken a:hover .par{
+    opacity: 1;
+}
+.senkuro a{
+    position: absolute;
+    top: 15%;
+    left: 53%;
+    width: 10%;
+    height: 37%;
+    /* border: 1px solid #000; */
+}
+.senyaku a{
+    position: absolute;
+    top: 53%;
+    left: 62%;
+    width: 8%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senshiba a{
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    width: 8%;
+    height: 50%;
+    /* border: 1px solid #000; */
+}
+.senri a{
+    position: absolute;
+    top: 12%;
+    left: 44%;
+    width: 8%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senkai a{
+    position: absolute;
+    top: 23%;
+    left: 68%;
+    width: 7%;
+    height: 33%;
+    /* border: 1px solid #000; */
+}
+.sentora a{
+    position: absolute;
+    top: 55%;
+    left: 26%;
+    width: 8%;
+    height: 30%;
+    /* border: 1px solid #000; */
+}
+.senfuku a{
+    position: absolute;
+    top: 23%;
+    left: 30%;
+    width: 7%;
+    height: 29%;
+    /* border: 1px solid #000; */
+}
+.sennya a{
+    position: absolute;
+    top: 83%;
+    left: 75%;
+    width: 4%;
+    height: 15%;
+    /* border: 1px solid #000; */
+}
+
+
+footer{
+    width: 100%;
+}
+footer p{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 10px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    z-index: 99;
+}
+.sankaku2 {
+    position: absolute;
+    display: table;
+    bottom: 0%;
+    width: 100%;
+    height: 5%;
+    /* transform: skewY(-20deg); */
+    background-color: rgba(0, 0, 0, 0.671);
+}
+.sankakunoshita2{
+    position: absolute;
+    display: table;
+    bottom: 6%;
+    width: 100%;
+    height: 1%;
+    /* transform: skewY(-20deg); */
+    background-color: rgba(0, 0, 0, 0.671);
+}
